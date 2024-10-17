@@ -36,3 +36,15 @@ sudo docker run -d --name dam_web1 -p 8000:80 -v ~/mi-web:/usr/local/apache2/htd
 ```bash
 http://localhost:8000
 ```
+### <u>*Actividad 5</u>:*
+
+*Crea otro contenedor 'dam_web2' con el mismo bind mount y a otro puerto, por ejemplo 9080.*
+```bash
+docker run -d --name dam_web2 -p 9080:80 -v ~/mi-web:/usr/local/apache2/htdocs httpd
+```
+### <u>*Actividad 6</u>:*
+*Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:*
+```bash
+http://localhost:8000
+http://localhost:9080
+```
