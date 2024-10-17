@@ -42,9 +42,17 @@ http://localhost:8000
 ```bash
 docker run -d --name dam_web2 -p 9080:80 -v ~/mi-web:/usr/local/apache2/htdocs httpd
 ```
+
 ### <u>*Actividad 6</u>:*
 *Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:*
 ```bash
 http://localhost:8000
 http://localhost:9080
 ```
+### <u>*Actividad 7</u>:*
+*Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página*
+```bash
+echo "<html><body><h1>Hola Mundo 2</h1></body></html>" > index.html
+```
+- Modificación realizada en `index.html` y se comprobó que ambos servidores reflejan el cambio.
+
